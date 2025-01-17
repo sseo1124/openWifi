@@ -1,4 +1,7 @@
-<%--
+<%@ page import="org.example.model.WifiInfo" %>
+<%@ page import="org.example.db.WifiDb" %>
+<%@ page import="java.util.List" %>
+<%@ page import="org.example.api.WifiApi" %><%--
   Created by IntelliJ IDEA.
   User: sanghyuk
   Date: 2025. 1. 17.
@@ -11,6 +14,13 @@
     <title>Title</title>
 </head>
 <body>
-  <p>load-wifi</p>
+    <%
+
+        List<WifiInfo> wifiApiInfo = WifiApi.getWifiApiInfo();
+        String result = WifiDb.insertWifiInfo(wifiApiInfo);
+    %>
+    <h2><%=result%></h2>
+
+   <a href="/">홈으로</a>
 </body>
 </html>

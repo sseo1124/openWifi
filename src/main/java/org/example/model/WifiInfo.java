@@ -31,9 +31,9 @@ public class WifiInfo {
     @SerializedName("X_SWIFI_REMARS3")
     private String xSwifiRemars3;
     @SerializedName("LAT")
-    private String lat;
+    private double lat;
     @SerializedName("LNT")
-    private String lnt;
+    private double lnt;
     @SerializedName("WORK_DTTM")
     private String workDttm;
 
@@ -90,11 +90,11 @@ public class WifiInfo {
         return xSwifiRemars3;
     }
 
-    public String getLat() {
+    public double getLat() {
         return lat;
     }
 
-    public String getLnt() {
+    public double getLnt() {
         return lnt;
     }
 
